@@ -200,5 +200,98 @@ lines`);
 
 
 //Taking Decisions: if / else statement
+/*
+const age = 15;
+//const isOldEnough = age >= 18;
 
-const age = 18;
+if (age >= 18) {
+    console.log("Beatrix can start driving license");
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Beatrix is too young. Wait another ${yearsLeft} years.`);
+}
+
+const birthYear = 1998;
+
+let century;
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
+//egy kód blokban meghatározott variáns később nem elérhető a kód blokkon kívül. Ha a variánst el akarjuk érni, akkor előtt meg kell határozni azt!
+//az if/else statementtel döntéseket hozhatunk a programon belül. az if után egy kondícióra van szükség, amelynek végeredménye igaz/hamis. Ha a kondíció igaz, az első blok lép életbe. Ha hamis, akkor a második blokk lesz aktiválva. ne feledjük, az else blok opcionális!*/
+
+
+
+//CODING CHALLENGE #2
+/*
+Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
+
+Your tasks:
+1. Print a nice output to the console, saying who has the higher BMI. The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark'sBMI (28.3) is higher than John's (23.9)!"
+
+GOOD LUCK
+
+const markWeightData1 = 78;
+const markHeightData1 = 1.69;
+const johnWeightData1 = 92;
+const johnHeightData1 = 1.95;
+
+const markBMI1 = markWeightData1 / (markHeightData1 * markHeightData1);
+const johnBMI1 = johnWeightData1 / (johnHeightData1 * johnHeightData1);
+
+
+if (markBMI1 > johnBMI1) {
+    console.log(`Mark's BMI (${markBMI1}) is higher then John's BMI (${johnBMI1})!`)
+} else {
+    console.log(`John's BMI (${johnBMI1}) is higher then Mark's BMI (${markBMI1})!`)
+}*/
+
+
+
+//Type Conversion and Coercion
+/*
+//Type conversion
+const inputYear = "1998";
+console.log(Number(inputYear));
+console.log(inputYear + 18);
+//mivel az eredeti inputYear egy string value sima hozzáadást nem végezhetünk vele, változtatások nélkül. Előtte megkell változtatni numberré, majd csak ezután lehet vele matematikai műveletek elvégezni vele
+
+console.log(Number(inputYear) + 18);
+//jelen helyzetben a matematikai művelet elvégezhető, mert itt a string átlett alakítva számá
+
+console.log(Number("David"));
+console.log(typeof NaN);
+//Amennyiben egy olyan stringet próbálunk átalakítani számá, ami nem tartalmaz számot, akkor NaN-t (not a numbert) kapunk. Pontosabban számot kapunk, mert a typeofban a NaN is számnak van véve, de egy invalid numberről beszélünk
+
+console.log(String(23), 23);
+//A JavaScriptben Stringbe, Numberbe és Booleanbe tudunk konvertálni. Undefined és Null értékre nem konvertálhatunk, amely mellesleg felesleges és logikátlan lenne. A Booleanek kicsit furcsán és máshogy viselkednek, ezért fogunk ezzel később foglalkozni.
+
+//Type Coersion
+console.log("I am " + 24 + " years old");
+console.log("I am " + "24" + " years old");
+console.log("I am " + String(24) + " years old");
+//a fent látott 3 példa ugyanazt az eredményt adja vissza, mégis sokban küönböznek. Az első a type coersionnek köszönhetően automatikusan átlesz fordítva olyanra, mint amilyen módszerrel a második lett megadva. Ha a type coersion nem létezne, akkor a 3. példa lenne a helyes megoldás.
+
+console.log("23" - "10" - 3);
+//jelen helyzetben a kapott eredmény 10 lesz, mivel a "-" automatikusan egy matematikai műveletet indítottak el és így a végeredmény egy number lesz
+
+console.log("23" + "10" + 3);
+//itt a kapott eredmény 23103 lesz, mivel a jelen esetben a "+" egy összevonás műveletet indított el és ennek köszönhetően a végeredmény egy string lesz
+
+console.log("23" * "2");
+//itt is a kapott végeredmény átlesz alakítva számmá, mivel a JS-ben a szorzás csak számmal tud működni
+
+let n = "1" + 1; //"11" / a plusz miatt a kapott végedermény 11 lesz
+n = n - 1; //10 / a mínusz miatt itt a újra számokkal dolgozunk
+console.log(n);
+
+//sokak szerint a type coercion hasznos, de a használata kockázatos lehet, mert nem odafigyelés esetén tud érdekes bugokat eredményezni*/
+
+
+
+//Truthy and Falsy Values
+
